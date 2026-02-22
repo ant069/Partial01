@@ -30,9 +30,6 @@ This project is a Java image editor for the Multimedia & Computer Graphics cours
 - `bin/`: Compiled classes
 - `lib/`: Dependencies (if any)
 
-## Authors
-- Student: [Your Name]
-- Professors: Eng. Bernardo Moya de la Mora & MS. Guillermo González Mena
 
 ## Requirements
 - Java 17+ (recommended)
@@ -44,8 +41,4 @@ javac -d bin src/Main.java src/ImageEditor.java src/operations/*.java
 java -cp bin Main
 ```
 
-## License
-MIT
 
----
-For questions or feedback, open an issue in the repo.
