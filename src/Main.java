@@ -1,5 +1,6 @@
+
 import operations.CropOperation;
-import operations.CropOperation;
+import operations.InvertOperation;
 import operations.RotateOperation;
 
 import java.io.IOException;

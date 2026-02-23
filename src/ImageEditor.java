@@ -11,7 +11,10 @@ public class ImageEditor {
 
     private final BufferedImage sourceImage;
     private final String        sourcePath;
-    private final List<ImageOperation> pipeline;
+    /**
+     * The operation pipeline. Exposed for GUI preview only (read-only).
+     */
+    public final List<ImageOperation> pipeline;
 
     /**
      * Loads an image from disk.
@@ -96,6 +99,19 @@ public class ImageEditor {
         ImageIO.write(current, fmt, new File(outputPath));
         System.out.printf("  [✓] Saved → %s  (%d×%d px)%n",
             outputPath, current.getWidth(), current.getHeight());
+    }
+
+    /**
+     * Returns a deep copy of the source image with all operations applied in order.
+     * Used for GUI preview.
+     * @return BufferedImage with all operations applied
+     */
+    public BufferedImage getPreviewImage() {
+        BufferedImage img = deepCopy(sourceImage);
+        for (ImageOperation op : pipeline) {
+            img = op.apply(img);
+        }
+        return img;
     }
 
     // ── Getters ───────────────────────────────────────────────────────────

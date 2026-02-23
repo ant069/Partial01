@@ -30,15 +30,22 @@ This project is a Java image editor for the Multimedia & Computer Graphics cours
 - `bin/`: Compiled classes
 - `lib/`: Dependencies (if any)
 
+=======
+
+>>>>>>> efff603 (Initial commit: Java image editor with GUI, crop, invert, rotate, and pipeline support)
 
 ## Requirements
 - Java 17+ (recommended)
 - VS Code or any Java IDE
 
 ## How to Run
-```
+
 javac -d bin src/Main.java src/ImageEditor.java src/operations/*.java
+<<<<<<< HEAD
 java -cp bin Main
 ```
 
 
+=======
+java -cp bin Main
+>>>>>>> efff603 (Initial commit: Java image editor with GUI, crop, invert, rotate, and pipeline support)
